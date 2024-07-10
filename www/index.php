@@ -74,8 +74,8 @@ if ($accessTokenResponse !== false) {
                 $message = '@StreamPings **' . $stream->user_name . '** has started streaming '.$stream->game_name.' on Twitch, [join them](' . $streamUrl . ')!';
 
                 $data = array(
-                    "username" => 'Freelancer Streams',
-                    "avatar_url" => 'https://static-cdn.jtvnw.net/ttv-boxart/5105_IGDB-144x192.jpg',
+                    "username" => $env["DISCORD_BOT_NAME"],
+                    "avatar_url" => (isset($env['DISCORD_BOT_AVATAR_URL'])? $env['DISCORD_BOT_AVATAR_URL']:''),
                     "content" => $message,
                     "embeds" => [
                         [
