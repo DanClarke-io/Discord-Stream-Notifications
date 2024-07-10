@@ -1,0 +1,13 @@
+services:
+  web-server:
+    build:
+      dockerfile: php.Dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/
+      - ./www:/var/www/html
+
+volumes:
+    db:
+    mysql-data:
