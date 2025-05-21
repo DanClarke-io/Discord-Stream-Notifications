@@ -113,7 +113,6 @@ if ($accessTokenResponse !== false) {
                 if ($result === false) {
                     // Handle error
                 } else {
-                    print_r($result);
                     $postedVids++;
                     // Message sent successfully
                 }
@@ -125,26 +124,3 @@ if ($accessTokenResponse !== false) {
     error_log('Handle error');
     die('Handle error');
 }
-
-
-
-// $data = array(
-//     "content" => $message
-// );
-
-// $options = array(
-//     "http" => array(
-//         "header"  => "Content-type: application/json",
-//         "method"  => "POST",
-//         "content" => json_encode($data)
-//     )
-// );
-
-// $context  = stream_context_create($options);
-// $result = file_get_contents($webhookUrl, false, $context);
-
-// if ($result === false) {
-//     // Handle error
-// } else {
-//     // Message sent successfully
-// }
